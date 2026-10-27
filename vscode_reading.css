@@ -27,6 +27,25 @@ a {
     color: var(--link);
 }
 
+/* VS Code's .vscode-light/.vscode-dark rules are more specific, so beat them with body[class] */
+body[class] h1,
+body[class] h2,
+body[class] hr,
+body[class] th,
+body[class] td {
+    border-color: var(--border);
+}
+
+body[class] pre,
+body[class] blockquote {
+    border-color: var(--border);
+    background: var(--bg-2);
+}
+
+body[class] pre code {
+    color: var(--text);
+}
+
 /* Reading typography */
 body {
     font-family: -apple-system, BlinkMacSystemFont,
