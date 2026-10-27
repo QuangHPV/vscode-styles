@@ -1,3 +1,32 @@
+/* Flexoki palette (https://stephango.com/flexoki), follows the VS Code theme */
+body {
+    --bg: #FFFCF0;
+    --bg-2: #F2F0E5;
+    --border: #CECDC3;
+    --text: #100F0F;
+    --muted: #6F6E69;
+    --link: #205EA6;
+}
+
+body.vscode-dark,
+body.vscode-high-contrast:not(.vscode-high-contrast-light) {
+    --bg: #100F0F;
+    --bg-2: #1C1B1A;
+    --border: #343331;
+    --text: #CECDC3;
+    --muted: #878580;
+    --link: #4385BE;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+a {
+    color: var(--link);
+}
+
 /* Reading typography */
 body {
     font-family: -apple-system, BlinkMacSystemFont,
@@ -25,14 +54,14 @@ h1 {
     font-size: 2em;
     margin-top: 0.5em;
     padding-bottom: 0.35em;
-    border-bottom: 1px solid var(--vscode-editorWidget-border);
+    border-bottom: 1px solid var(--border);
 }
 
 h2 {
     font-size: 1.5em;
     margin-top: 1.8em;
     padding-bottom: 0.25em;
-    border-bottom: 1px solid var(--vscode-editorWidget-border);
+    border-bottom: 1px solid var(--border);
 }
 
 h3 {
@@ -52,13 +81,13 @@ li {
 blockquote {
     margin-left: 0;
     padding: 0.1em 1em;
-    border-left: 3px solid var(--vscode-textLink-foreground);
-    opacity: 0.9;
+    border-left: 3px solid var(--border);
+    color: var(--muted);
 }
 
 hr {
     border: 0;
-    border-top: 1px solid var(--vscode-editorWidget-border);
+    border-top: 1px solid var(--border);
     margin: 2em 0;
 }
 
@@ -73,10 +102,11 @@ pre {
 :not(pre)>code {
     padding: 0.15em 0.35em;
     border-radius: 4px;
-    background: var(--vscode-textCodeBlock-background);
+    background: var(--bg-2);
 }
 
 pre {
+    background: var(--bg-2);
     padding: 16px 18px;
     border-radius: 8px;
     overflow-x: auto;
@@ -97,7 +127,7 @@ table {
 th,
 td {
     padding: 9px 13px;
-    border: 1px solid var(--vscode-editorWidget-border);
+    border: 1px solid var(--border);
 }
 
 th {
